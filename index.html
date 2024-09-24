@@ -1,37 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer Dinámico</title>
     <style>
+        /* Eliminar márgenes y rellenos predeterminados */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #003A78;
+            /* Fondo azul */
+        }
+
+        footer {
+            width: 100%;
+            position: fixed;
+            /* Asegura que el footer esté siempre al fondo */
+            bottom: 0;
+        }
+
         .bg-azul {
             background-color: #003A78;
-            /* Agregar el punto para indicar que es una clase */
             color: white;
-            /* Puedes agregar color de texto para mejor legibilidad */
             padding: 20px;
-            /* Espaciado interno */
             text-align: center;
-            /* Alinear texto al centro */
         }
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
     </style>
 </head>
 
 <body>
-    <footer class="footer bg-azul col-md-12" scrolling="no">
+    <footer class="bg-azul" borderframe="0" scrolling="no">
         <p>&copy; <span id="currentYear"></span> - Universidad Americana - By Chiki18</p>
     </footer>
 
