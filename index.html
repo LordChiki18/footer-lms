@@ -18,8 +18,18 @@
         <p>&copy; <span id="currentYear"></span> - Universidad Americana - By Chiki Footer uwu</p>
     </footer>
 
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+<script>
+    function updateYear() {
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentYear').textContent = currentYear;
+    }
+    
+    // Llama la función inmediatamente para establecer el año al cargar la página
+    updateYear();
+    
+    // Revisa cada segundo si el año cambia
+    setInterval(updateYear, 1000);
+</script>
+
 </body>
 </html>
