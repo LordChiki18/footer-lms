@@ -27,6 +27,9 @@
         footer {
             width: 100%;
             position: fixed;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
             /* Asegura que el footer esté siempre al fondo */
             bottom: 0;
         }
@@ -37,11 +40,21 @@
             padding: 20px;
             text-align: center;
         }
+
+        .footer-image {
+            width: 20%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 
 <body>
     <footer class="bg-azul" borderframe="0" scrolling="no">
+        <img class="footer-image"
+            src="http://www.americana.edu.py/wp-content/uploads/2022/11/americana_eleve_logo-web-light.opt_.png"
+            alt="Universidad Americana" />
         <p>&copy; <span id="currentYear"></span> - Universidad Americana - By Chiki18</p>
     </footer>
 
