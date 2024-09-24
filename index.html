@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Footer Dinámico</title>
-<style>
-.bg-azul {
-background-color: #003A78; /* Agregar el punto para indicar que es una clase */
-color: white; /* Puedes agregar color de texto para mejor legibilidad */
-padding: 20px; /* Espaciado interno */
-text-align: center; /* Alinear texto al centro */
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssCanvas.css">
+    <title>Document</title>
 </head>
+
 <body>
-<footer class="footer bg-azul col-md-12" scrolling="no">
-<p>&copy; <span id="currentYear"></span> - Universidad Americana - By Chiki18</p>
-</footer>
+
+    <section class="footer-dl-generico">
+        <img class="footer-logo-white"
+            src="http://www.americana.edu.py/wp-content/uploads/2022/11/americana_eleve_logo-web-light.opt_.png"
+            alt="Universidad Americana" />
+        <span class="parrafo-bienestar-seccion" style="justify-content: center; text-align: center;">Copyright
+            Universidad Americana &copy; <span id="currentYear"></span>. All rights reserved.</span>
+    </section>
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-<script>
-    function updateYear() {
-        const currentYear = new Date().getFullYear();
-        console.log("Año actual:", currentYear); // Mostrar el año en la consola
-        document.getElementById('currentYear').textContent = currentYear;
-    }
-    
-    // Llama la función inmediatamente para establecer el año al cargar la página
-    updateYear();
-    
-    // Revisa cada segundo si el año cambia
-    setInterval(updateYear, 10000);
-</script>
+    <script>
+        function updateYear() {
+            const currentYear = new Date().getFullYear();
+            console.log("Año actual:", currentYear); // Mostrar el año en la consola
+            document.getElementById('currentYear').textContent = currentYear;
+        }
+
+        // Llama la función inmediatamente para establecer el año al cargar la página
+        updateYear();
+
+        // Revisa cada segundo si el año cambia
+        setInterval(updateYear, 10000);
+    </script>
 
 </body>
+
 </html>
