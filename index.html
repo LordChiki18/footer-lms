@@ -6,30 +6,33 @@
     <title>Footer Dinámico</title>
     <style>
         .bg-azul {
-            background-color: #003A78; /* Agregar el punto para indicar que es una clase */
-            color: white; /* Puedes agregar color de texto para mejor legibilidad */
-            padding: 20px; /* Espaciado interno */
-            text-align: center; /* Alinear texto al centro */
+            background-color: #003A78;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <footer class="footer bg-azul col-md-12" scrolling="no">
+    <footer class="footer bg-azul col-md-12">
         <p>&copy; <span id="currentYear"></span> - Universidad Americana - By Chiki Footer uwu</p>
     </footer>
 
-<script>
-    function updateYear() {
-        const currentYear = new Date().getFullYear();
-        document.getElementById('currentYear').textContent = currentYear;
-    }
-    
-    // Llama la función inmediatamente para establecer el año al cargar la página
-    updateYear();
-    
-    // Revisa cada segundo si el año cambia
-    setInterval(updateYear, 1000);
-</script>
+    <script>
+        let currentYear = 2024; // Comenzamos con el año 2024
+        
+        function toggleYear() {
+            // Alterna entre 2024 y 2025
+            currentYear = (currentYear === 2024) ? 2025 : 2024;
+            document.getElementById('currentYear').textContent = currentYear;
+        }
+        
+        // Llama a la función para mostrar el año inicial
+        toggleYear();
+        
+        // Alterna el año cada 10 segundos (10000 milisegundos)
+        setInterval(toggleYear, 100);
+    </script>
 
 </body>
 </html>
