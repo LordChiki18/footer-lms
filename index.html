@@ -47,15 +47,39 @@
             display: flex;
             flex-direction: column;
         }
+
+        .footer-content {
+            width: 100%;
+            height: 8vh;
+            background-color: #003a78;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .footer-text {
+            color: aliceblue;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4vw;
+            width: 100%;
+            text-align: center;
+            justify-items: center;
+            padding-top: 10px;
+            justify-content: center;
+        }
     </style>
 </head>
 
 <body>
-    <footer class="bg-azul" borderframe="0" scrolling="no">
+
+    <section class="footer-content">
         <img class="footer-image"
             src="http://www.americana.edu.py/wp-content/uploads/2022/11/americana_eleve_logo-web-light.opt_.png"
             alt="Universidad Americana" />
-        <p>&copy; <span id="currentYear"></span> - Universidad Americana - By Chiki18</p>
+        <p class="footer-text">&copy; <span id="currentYear"></span> - Universidad Americana - By Chiki18</p>
+    </section>
+    <footer class="bg-azul" borderframe="0" scrolling="no">
     </footer>
 
     <script>
